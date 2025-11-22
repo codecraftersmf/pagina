@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Usa TU imagen de fondo */
+    background-image: url('fondo.jpg'); /* ← ¡CAMBIA ESTE NOMBRE! */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Centrar todo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.contenedor {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.55); /* Fondo oscuro semitransparente para que se lea bien */
+    color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(8px); /* Efecto de vidrio (se ve muy bonito) */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+}
+
+h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+p {
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+    color: #f0f0f0;
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.85rem 2.2rem;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 117, 252, 0.6);
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Crafters</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Estilos responsivos para celular (lo único añadido) -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .contenedor {
+            width: 95%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .boton {
+            display: inline-block;
+            padding: 10px 16px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            .boton {
+                display: block;
+                width: 90%;
+                margin: 8px auto;
+                text-align: center;
+                padding: 12px;
+            }
+            h1, h2, h3 {
+                font-size: 1.4em;
+            }
+            p {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Bienvenido a Code Crafters</h1>
+        <p>Este es un ejemplo</p>
+        <!-- Botón que activa la presentación -->
+        <a href="#" class="boton" id="botonEntrar">Ver Equipo</a>
+        <a href="#" class="boton" id="botonProyecto" style="margin-left: 10px;">Ver Proyecto y Precio</a>
+
+        <!-- Contenido oculto del equipo -->
+        <div id="infoEquipo" style="display: none; margin-top: 30px;">
+            <h2>Nuestro Equipo</h2>
+
+            <!-- Imagen del proyecto (ahora con proyecto.png) -->
+            <div class="proyecto-imagen">
+                <img src="logo.png" alt="Imagen del proyecto Code Crafters" style="max-width: 100%; height: auto; border-radius: 8px; margin: 20px 0;">
+            </div>
+
+            <!-- Información sobre el curso -->
+            <div class="info-curso">
+                <h3>¿Qué hacemos en este curso?</h3>
+                <p>En este curso trabajamos en proyectos integradores que combinan programación, electrónica (con Arduino), diseño visual y trabajo en equipo. Nuestro objetivo es desarrollar soluciones tecnológicas reales, aplicando conocimientos de tecnología, pensamiento computacional y habilidades blandas como la comunicación y la planificación.</p>
+            </div>
+
+            <!-- Miembros del equipo -->
+            <div class="miembro">
+                <h3>Matias Zani</h3>
+                <p>lider y alma de la fiesta.</p>
+            </div>
+
+            <div class="miembro">
+                <h3>Kevin moran</h3>
+                <p>hardware.</p>
+            </div>
+
+            <div class="miembro">
+                <h3>Memo</h3>
+                <p>hardware.</p>
+            </div>
+
+            <div class="miembro">
+                <h3>Katherina perez</h3>
+                <p>Encargada de la parte visual de cada proyecto creado.</p>
+            </div>
+
+            <div class="miembro">
+                <h3>Abigail gomez</h3>
+                <p>Encargada de la planificación.</p>
+            </div>
+
+            <div class="miembro">
+                <h3>Agustín Videla</h3>
+                <p>software.</p>
+            </div>
+
+       		<div class="miembro">
+                <h3>mauro vargas</h3>
+                <p>programación.</p>
+            </div>
+			
+			<div class="miembro">
+                <h3>agustin rojas</h3>
+                <p>software.</p>
+            </div>
+			
+			<div class="miembro">
+                <h3>tiziano champagna</h3>
+                <p>software.</p>
+            </div>
+			
+			<div class="miembro">
+                <h3>catalina perez</h3>
+                <p>apartado visual.</p>
+            </div>
+			
+			<div class="miembro">
+                <h3>benjamin ortegas</h3>
+                <p>planificación.</p>
+            </div>
+
+            <div class="miembro">
+                <h3>Carrizo Florencia</h3>
+                <p>Profe de habilidades blandas.</p>
+            </div>
+        </div>
+
+            <div class="miembro">
+                <h3>daniel luffi</h3>
+                <p>profe de habilidades tecnologicas.</p>
+            </div>
+        </div>
+
+        <!-- NUEVA SECCIÓN: Proyecto y Precio (oculta por defecto) -->
+        <div id="infoProyecto" style="display: none; margin-top: 30px;">
+            <h2>Proyecto Final</h2>
+            <img 
+                src="https://media.giphy.com/media/3o7TKsQ8UQ4l7CFs1i/giphy.gif" 
+                alt="Vaca animada" 
+                style="max-width: 100%; height: auto; border-radius: 8px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+                onclick="document.getElementById('moo').play();">
+            <div style="background: rgba(240, 248, 255, 0.8); padding: 15px; border-radius: 8px; margin-top: 15px;">
+                <strong>💰 Precio estimado:</strong> $150 USD<br>
+                <small>(Incluye componentes, desarrollo y documentación)</small>
+            </div>
+            <!-- Audio oculto (sin afectar diseño) -->
+            <audio id="moo" src="https://www.soundjay.com/nature/sounds/cow-moo-1.mp3" preload="auto" style="display:none"></audio>
+        </div>
+    </div>
+
+    <script>
+        // Tu código original: muestra el equipo
+        document.getElementById("botonEntrar").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("infoEquipo").style.display = "block";
+            document.getElementById("infoProyecto").style.display = "none"; // Asegura que el otro se oculte
+        });
+
+        // Nuevo código: muestra el proyecto y el precio
+        document.getElementById("botonProyecto").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("infoProyecto").style.display = "block";
+            document.getElementById("infoEquipo").style.display = "none"; // Asegura que el otro se oculte
+        });
+    </script>
+</body>
+</html>
